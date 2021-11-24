@@ -1,0 +1,7 @@
+kafka:
+  capacity: 512
+  topic: "ise-apartment-events"
+  groupId: "ise-apartment-facade"
+  brokers:
+    - "kafka:9092"
+    - "localhost:9094"
