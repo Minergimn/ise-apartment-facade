@@ -4,14 +4,15 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/Shopify/sarama"
-	"github.com/ozonmp/ise-apartment-facade/internal/app/receiver"
-	"github.com/ozonmp/ise-apartment-facade/internal/config"
-	apartment "github.com/ozonmp/ise-apartment-facade/internal/model"
 	"log"
 	"os"
 	"os/signal"
 	"syscall"
+
+	"github.com/Shopify/sarama"
+	"github.com/ozonmp/ise-apartment-facade/internal/app/receiver"
+	"github.com/ozonmp/ise-apartment-facade/internal/config"
+	apartment "github.com/ozonmp/ise-apartment-facade/internal/model"
 )
 
 func ConsumeEvent(ctx context.Context, message *sarama.ConsumerMessage) error {
